@@ -7,8 +7,6 @@ RUN npm config rm proxy --global
 RUN npm config rm https-proxy
 RUN npm config rm https-proxy --global
 RUN npm config rm registry
-RUN npm cache clean
-RUN sudo apt-get remove nodejs nodejs-dev node-gyp libssl1.0-dev npm
 
 RUN sudo apt-get install nodejs nodejs-dev node-gyp libssl1.0-dev npm
 RUN npm config set https-proxy http://${uname}:${pword}@${prox}:${port}--global
