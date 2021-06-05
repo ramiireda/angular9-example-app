@@ -16,8 +16,8 @@ RUN npm config set registry http://registry.npmjs.org
 RUN npm config set strict-ssl false
 
 RUN npm install
-RUN npm run build --prod
+RUN npm start
 
 # stage 2
-FROM nginx:alpine
-COPY --from=node /app/dist/angular-app /usr/share/nginx/html
+#FROM nginx:alpine
+#COPY --from=node /app/dist/angular-app /usr/share/nginx/html
